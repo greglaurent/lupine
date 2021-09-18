@@ -1,5 +1,4 @@
 use bit_vec::BitVec;
-use crossbeam_utils::thread;
 use std::{
     collections::hash_map::{DefaultHasher, RandomState}, 
     hash::{BuildHasher, Hash, Hasher}, 
@@ -71,17 +70,11 @@ impl<T: ?Sized + Send + Sync> BloomFilter<T> {
         let (h1, h2) = self.hash(item);
 
         for i in 0..self.k { 
-            let t = thread::scope(|scope| {
-                let t = scope.spawn(|_| { 
-                    let index = self.get_index(h1, h2, i as u64);
-                    return self.bitmap.get(index).unwrap()
-                });
-
-                return t.join().unwrap()
-            }).unwrap();
-
-            if !t { return false }
-        }
+            let index = self.get_index(h1, h2, i as u64);
+            if !self.bitmap.get(index).unwrap() { 
+                return false
+            }
+       }
         true
     }
 }
@@ -92,9 +85,9 @@ mod tests {
 
     #[test]
     fn test_insert() {
-        let mut bf = BloomFilter::new(1000, 0.01);
-        bf.insert("test");
-        assert!(bf.contains("test"));
+        let mut bf = BloomFilter::new(1000, 0.0000001);
+        bf.insert(&10);
+        assert!(bf.contains(&10));
     }
 
     #[test]
