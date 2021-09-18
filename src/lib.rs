@@ -1,9 +1,9 @@
-extern crate bit_vec;
-
 use bit_vec::BitVec;
-use std::{collections::hash_map::{DefaultHasher, RandomState}, hash::{BuildHasher, Hash, Hasher}, marker::PhantomData, sync::{Arc, Mutex}, thread::JoinHandle};
-
 use crossbeam_utils::thread;
+use std::{
+    collections::hash_map::{DefaultHasher, RandomState}, 
+    hash::{BuildHasher, Hash, Hasher}, 
+    marker::PhantomData};
 
 const FALSE_POS_PROB: f64 = -1.0f64;
 const LN_2_SQR: f64 = core::f64::consts::LN_2 * core::f64::consts::LN_2;
