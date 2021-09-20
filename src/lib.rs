@@ -7,8 +7,8 @@ const LN_2: f64 = core::f64::consts::LN_2;
 const LN_2_SQR: f64 = LN_2 * LN_2;
 
 /// A standard Bloom Filter, using Kirsch and Mitzenmacher
-/// (two hash functions) and Fx Hash.
-/// See: [FX Hash](https://github.com/cbreeden/fxhash)
+/// optimization and two hash functions.
+/// Hash: [FX Hash](https://github.com/cbreeden/fxhash)
 pub struct BloomFilter<T: ?Sized> {
     k: u64, 
     m: usize,
@@ -55,7 +55,7 @@ impl<T: ?Sized> BloomFilter<T> {
     ///
     /// where P is the probability of false positives
     /// and n is the acceptable false postive rate
-    /// k = -( n * lnP / (ln2)^2 )
+    /// k = ( -( n * lnP ) / (ln2)^2 )
     fn optimal_m(false_pos_rate: f64, size: usize) -> usize { 
         ((size as f64 * FALSE_POS_PROB * false_pos_rate.ln()) / LN_2_SQR).ceil() as usize
     }
@@ -65,7 +65,7 @@ impl<T: ?Sized> BloomFilter<T> {
     /// yielding k indices into the bit array
     ///
     /// where P is the probability of false positives
-    /// k = -( lnP / ln2 )
+    /// k = ( - lnP / ln2 )
     fn optimal_k(false_pos_rate: f64) -> u64 {
         (false_pos_rate.ln() * FALSE_POS_PROB / LN_2).ceil() as u64
     }
