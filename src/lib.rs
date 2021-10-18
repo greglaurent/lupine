@@ -28,7 +28,7 @@ impl<T: ?Sized> BloomFilter<T> {
     /// # Examples
     ///
     /// ```
-    /// use tulip::BloomFilter;
+    /// use lupine::BloomFilter;
     /// let filter: BloomFilter<usize> = BloomFilter::new(1_000, 0.001);
     /// ```
     pub fn new(size: usize, false_pos_rate: f64) -> Self { 
@@ -95,7 +95,7 @@ impl<T: ?Sized> BloomFilter<T> {
     ///
     /// # Examples: 
     /// ```
-    /// use tulip::BloomFilter;
+    /// use lupine::BloomFilter;
     /// let mut bf = BloomFilter::new(1000, 0.0001);
     /// bf.insert(&10);
     /// assert!(bf.contains(&10));
@@ -113,7 +113,7 @@ impl<T: ?Sized> BloomFilter<T> {
     ///
     /// # Examples: 
     /// ```
-    /// use tulip::BloomFilter;
+    /// use lupine::BloomFilter;
     /// let mut bf = BloomFilter::new(1000, 0.0001);
     /// assert!(!bf.contains(&10));
     /// bf.insert(&10);

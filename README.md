@@ -1,4 +1,4 @@
-# tulip
+# lupine
 
 A Bloom Filter, using Kirsch and Mitzenmacher optimization and two hash functions.
 
@@ -8,7 +8,7 @@ Hash: [FX Hash](https://github.com/cbreeden/fxhash)
 ## Use
 
 ```
-use tulip::BloomFilter;
+use lupine::BloomFilter;
 
 fn main() {
     let mut filter = BloomFilter::new(1_000, 0.001);

@@ -1,7 +1,7 @@
 extern crate bencher;
 
 use bencher::{Bencher, benchmark_group, benchmark_main};
-use tulip::BloomFilter;
+use lupine::BloomFilter;
 
 fn build_filter<T>(size: usize, rate: f64) -> (BloomFilter<T>, usize, f64) { 
     let f: BloomFilter<T> = BloomFilter::new(size, rate);
