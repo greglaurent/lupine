@@ -6,9 +6,7 @@ const FALSE_POS_PROB: f64 = -1.0;
 const LN_2: f64 = core::f64::consts::LN_2;
 const LN_2_SQR: f64 = LN_2 * LN_2;
 
-/// A standard Bloom Filter, using Kirsch and Mitzenmacher
-/// optimization and two hash functions.
-/// Hash: [FX Hash](https://github.com/cbreeden/fxhash)
+/// Representation of a bloom filter
 pub struct BloomFilter<T: ?Sized> {
     k: u64, 
     m: usize,
@@ -109,7 +107,7 @@ impl<T: ?Sized> BloomFilter<T> {
         }
     }
 
-    /// Check if t of type T into the BloomFilter index
+    /// Check if t of type T is in the BloomFilter index
     ///
     /// # Examples: 
     /// ```
