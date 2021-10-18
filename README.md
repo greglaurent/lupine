@@ -1,4 +1,4 @@
-# lupine ![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+# lupine [![Build Status]][actions] [![Latest Version]][crates.io]
 
 A Bloom Filter using Kirsch and Mitzenmacher optimization with two hash functions.
 
