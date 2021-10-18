@@ -2,6 +2,11 @@
 name = "tulip"
 version = "0.2.0"
 edition = "2018"
+license = "MIT OR Apache-2.0"
+authors = [ "Gregory Laurent <gregory.m.laurent@gmail.com>"]
+description = "A simple bloom filter using FX Hash"
+keywords= [ "tulip", "bloom", "filter" ]
+include = ["src/**/*.rs", "crates-io.md", "README.md", "LICENSE-APACHE", "LICENSE-MIT"]
 
 [dependencies]
 bencher = "0.1.5"
