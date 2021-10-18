@@ -1,5 +1,4 @@
-# lupine [![Build Status]][actions] [![Latest Version]][crates.io]
-
+# lupine 
 A Bloom Filter using Kirsch and Mitzenmacher optimization with two hash functions.
 
 Hash: [Fx Hash](https://github.com/cbreeden/fxhash)
