@@ -25,3 +25,14 @@ jobs:
     - uses: actions/checkout@v2
     - name: Test
       run: cargo test --verbose
+      
+  clippy:
+    name: Clippy
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
+    steps:
+      - uses: actions/checkout@v2
+      - uses: dtolnay/rust-toolchain@clippy
+        # The need for -Aredundant_field_names here is a Clippy bug.
+        # https://github.com/rust-lang/rust-clippy/issues/5356
+      - run: cd cargo clippy -- -D clippy::all
