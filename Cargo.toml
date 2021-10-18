@@ -6,7 +6,7 @@ license = "MIT OR Apache-2.0"
 authors = [ "Gregory Laurent <gregory.m.laurent@gmail.com>"]
 repository = "https://github.com/greglaurent/lupine.git"
 description = "A bloom filter using FX Hash with Kirsch and Mitzenmacher optimization."
-keywords= [ "lupine", "bloom", "filter", "Kirsch", "Mitzenmacher", "Fx", "Hash" ]
+keywords= [ "lupine", "bloom", "filter", "Kirsch_Mitzenmacher", "FxHash"]
 include = ["src/**/*.rs", "benches/**/*.rs", "crates-io.md", "README.md", "LICENSE-APACHE", "LICENSE-MIT"]
 
 [dependencies]
