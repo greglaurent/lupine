@@ -1,4 +1,4 @@
-# lupine ![tests](https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/workflow.yml/badge.svg)
+# lupine ![tests](https://github.com/greglaurent/lupin/actions/workflows/rust.yml/badge.svg)
 
 A Bloom Filter using Kirsch and Mitzenmacher optimization with two hash functions.
 
