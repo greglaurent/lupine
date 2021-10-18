@@ -1,11 +1,11 @@
 [package]
 name = "lupine"
-version = "0.2.1"
+version = "0.2.2"
 edition = "2018"
 license = "MIT OR Apache-2.0"
 authors = [ "Gregory Laurent <gregory.m.laurent@gmail.com>"]
 repository = "https://gitlab.com/greglaurent/lupine"
-description = "A simple bloom filter using FX Hash"
+description = "A bloom filter using FX Hash with Kirsch and Mitzenmacher optimization."
 keywords= [ "lupine", "bloom", "filter" ]
 include = ["src/**/*.rs", "benches/**/*.rs", "crates-io.md", "README.md", "LICENSE-APACHE", "LICENSE-MIT"]
 

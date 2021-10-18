@@ -1,8 +1,8 @@
 # lupine
 
-A Bloom Filter, using Kirsch and Mitzenmacher optimization and two hash functions.
+A Bloom Filter using Kirsch and Mitzenmacher optimization with two hash functions.
 
-Hash: [FX Hash](https://github.com/cbreeden/fxhash)
+Hash: [Fx Hash](https://github.com/cbreeden/fxhash)
 
 
 ## Use
