@@ -1,4 +1,5 @@
-# lupine 
+# lupine ![Build](https://github.com/greglaurent/lupine/actions/workflows/build.yml/badge.svg) ![Tests](https://github.com/greglaurent/lupine/actions/workflows/tests.yml/badge.svg)
+
 A Bloom Filter using Kirsch and Mitzenmacher optimization with two hash functions.
 
 Hash: [Fx Hash](https://github.com/cbreeden/fxhash)
