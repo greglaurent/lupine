@@ -16,4 +16,5 @@ fxhash = "0.2.1"
 
 [[bench]]
 name = "benchmarks"
+path = "./benches/benchmarks.rs"
 harness = false
